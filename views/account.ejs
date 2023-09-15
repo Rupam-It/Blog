@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Daily Journal - account</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      background-color: #333;
+      border: none;
+      border-radius: 0;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .navbar-nav > li > a {
+      color: #fff;
+      font-size: 1.7rem;
+    }
+
+    .navbar-nav > li.active {
+      background-color: #555;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 3rem;
+    }
+
+    /* .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer p {
+      margin: 0;
+    } */
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">DAILY JOURNAL</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/compose">Compose</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/home">HOME</a></li>
+        <li><a href="/about">ABOUT US</a></li>
+        <li><a href="/contact">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <body>
+    <div class="container">
+<center>
+    <h1>your blogs</h1>
+  </center>
+ 
+
+
+    <% if (posts.length > 0) { %>
+        <% posts.forEach(function(post){ %>
+          <h1><%= post.title %></h1>
+          <p>
+            <%= post.content.substring(0, 100) + " ..." %>
+            <a href="/account/<%= post.title %>">Read More</a>
+          </p>
+        <% }) %>
+      <% } else { %>
+        <p>No posts available.</p>
+      <% } %>
+      
+      <!-- <center>
+        <h1>your comments</h1>
+      </center> -->
+
+<!-- this is footer-------------------------- -->
+</div>
+<div class="footer-padding"></div>
+<div class="footer bg-dark text-white text-center py-2">
+  <p>Made with ❤️ by Rupam</p>
+</div>
+</div>
+</body>
+</html>

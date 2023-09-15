@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Daily Journal-drashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #333;
+      border: none;
+      border-radius: 0;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .navbar-nav > li > a {
+      color: #fff;
+      font-size: 1.7rem;
+    }
+
+    .navbar-nav > li.active {
+      background-color: #555;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+.blog{
+  font-size: 5rem;
+}
+p.blog{
+  font-size: 3rem;
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">DAILY JOURNAL</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/login">Login</a></li>
+        <li><a href="/signup">Signup</a></li>
+        <li><a href="/home">HOME</a></li>
+        <li><a href="/about">ABOUT US</a></li>
+        <li><a href="/contact">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <%  posts.forEach(function(post){ %>
+      <% if (post && post.content) { %>
+        <h1 class="blog"><%= post.title %></h1>
+        <p class="blog">
+          <%= post.content.substring(0, 100) + " ..." %>
+          <a href="/posts/<%= post.title %>">Read More</a>
+        </p>
+      <% } else { %>
+        <p>No content available.</p>
+      <% } %>
+    <% }) %>
+  </div>
+
+  <div class="footer-padding"></div>
+  <div class="footer bg-dark text-white text-center py-2">
+    <p>Made with ❤️ by Rupam</p>
+  </div>
+</body>
+</html>
