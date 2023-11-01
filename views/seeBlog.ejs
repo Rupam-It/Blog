@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Daily Journal - seeBlog</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      background-color: #333;
+      border: none;
+      border-radius: 0;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .navbar-nav > li > a {
+      color: #fff;
+      font-size: 1.7rem;
+    }
+
+    .navbar-nav > li.active {
+      background-color: #555;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+    .form-group input.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+h1.blog{
+  font-size: 6rem;
+}
+p.blog {
+      font-size: 3.6rem;
+      max-width: 100%;
+      overflow-wrap: break-word;
+}
+p{
+  font-size: 1.5rem;
+      max-width: 100%;
+      overflow-wrap: break-word;
+}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">DAILY JOURNAL</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="compose1"><a href="/login">login</a></li>
+        <li id="compose1"><a href="/signup">signup</a></li>
+        <li id="home"><a href="/">Blogs</a></li>
+        <li id="about"><a href="/about">ABOUT US</a></li>
+        <li id="contact"><a href="/contact">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+<div class="container">
+  <center>
+    <h1 class="blog"><%=title%></h1>
+    <p>-by <%=writer%></p>
+  </center>
+  <p class="blog"><%=content%></p>
+
+  
+  <br>
+  <br>
+  <br>
+  <div class="form-group">
+    <input type="text" class="form-control" name="comment" placeholder="enter comment">
+  </div>
+  <p>to leave a comment sign in</p>
+</div>
+  
+
+<!-- this is footer-------------------------- -->
+<div class="footer-padding"></div>
+<div class="footer bg-dark text-white text-center py-2">
+  <p>Made with ❤️ by Rupam</p>
+</div>
+</div>
+</body>
+</html>

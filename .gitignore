@@ -1,0 +1,38 @@
+# Ignore compiled files
+*.o
+*.out
+*.class
+
+# Ignore dependencies
+/node_modules
+/bower_components
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.*.local
+
+# Ignore log files and databases
+*.log
+*.sqlite
+*.db
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+
+# Ignore build and output directories
+/build
+/dist
+
+# Ignore user-specific files
+*.iml
+*.swp
+*.swo
+
+# Ignore cache files
+.cache/

@@ -1,0 +1,16 @@
+all file and file name description
+header and headerdrashbroad are almost same
+
+
+account means user account 
+
+drashboard is the unloged user viewing files
+
+
+home for after login you see it
+
+manageBlog that writer will see
+
+post loged user see 
+
+seeBlog this will unloged user see

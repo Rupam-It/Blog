@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Daily Journal - manageBlog</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      background-color: #333;
+      border: none;
+      border-radius: 0;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .navbar-nav > li > a {
+      color: #fff;
+      font-size: 1.7rem;
+    }
+
+    .navbar-nav > li.active {
+      background-color: #555;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 20px;
+      color: #333; /* Added color */
+    }
+
+    p {
+      font-size: 3rem;
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+
+    .btn {
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">DAILY JOURNAL</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/compose">Compose</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/home">HOME</a></li>
+        <li><a href="/about">ABOUT US</a></li>
+        <li><a href="/contact">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <center>
+
+      <h1><%=title%></h1>
+    </center>
+    <p><%=content%></p>
+
+    <br>
+    <br>
+    <br>
+    <p>
+      <a href="/edit?title=<%=title%>"><button type="button" class="btn btn-success">Edit</button></a> 
+      <a href="/delete?title=<%=title%>"> <button type="button" class="btn btn-danger">Delete</button></a>
+    </p>
+  </div>
+  <div class="footer-padding"></div>
+  <div class="footer bg-dark text-white text-center py-2">
+    <p>Made with ❤️ by Rupam</p>
+  </div>
+
+</body>
+
+</html>

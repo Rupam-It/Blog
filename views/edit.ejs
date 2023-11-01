@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Daily Journal - edit</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      background-color: #333;
+      border: none;
+      border-radius: 0;
+    }
+
+    .navbar-brand {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .navbar-nav > li > a {
+      color: #fff;
+      font-size: 1.7rem;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .form-control {
+      font-size: 1.2rem;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+    textarea.form-control {
+      font-size: 2.5rem;
+    }
+input[type="text"]{
+  font-size: 2rem;
+}
+    #updateButton {
+      margin-top: 20px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">DAILY JOURNAL</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/compose">Compose</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/home">HOME</a></li>
+        <li><a href="/about">ABOUT US</a></li>
+        <li><a href="/contact">CONTACT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Edit Post</h1>
+    <form action="/update?content=<%=content%>" method="post">
+      <div class="form-group">
+        <label for="postTitle">Title</label>
+        <input class="form-control" type="text" name="postTitle" value="<%=title%>">
+      </div>
+      <div class="form-group">
+        <label for="postBody">Post</label>
+        <textarea class="form-control" name="postBody" rows="5" cols="30"><%=content%></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" name="button" id="updateButton">Update</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-padding"></div>
+  <div class="footer bg-dark text-white text-center py-2">
+    <p>Made with ❤️ by Rupam</p>
+  </div>
+</body>
+</html>
